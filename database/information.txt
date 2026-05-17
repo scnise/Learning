@@ -1,0 +1,5 @@
+Here's some information for this piece of code:
+to start using this bot find a token in BotFather and put it in a main.py
+write  pip install telebot in the terminal
+and then just write pyrhon3 main.py and use it
+all(only 3) commands you can find if you'll read a code of a main.py
