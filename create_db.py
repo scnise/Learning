@@ -1,10 +1,17 @@
 import sqlite3
 import telebot
+import time
 token = ""
 cs = telebot.TeleBot(token)
-
 connection = sqlite3.connect("portfolio.db", check_same_thread=False)
 cursor = connection.cursor()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS users(
+            id INTEGER PRIMARY KEY,
+            name TEXT,
+            age INTEGER
+               )
+               """)
 @cs.message_handler(commands=['delete'])
 def delete(message):
     name = message.from_user.username
@@ -84,5 +91,4 @@ while True:
         cs.polling(none_stop=True, interval=0, timeout=20)
     except Exception as e:
         print(f"Произошла ошибка связи: {e}")
-        import time
         time.sleep(5)
