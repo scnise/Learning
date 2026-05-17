@@ -7,8 +7,7 @@ def init():
     CREATE TABLE IF NOT EXISTS users(
         id INTEGER PRIMARY KEY,
         name TEXT,
-        age INTEGER           
-                   )
+        age INTEGER)
     """)    
     c.commit()
     c.close()
