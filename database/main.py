@@ -1,7 +1,7 @@
 import telebot
 import database as db
 import time
-token="8590528341:AAF9Cb1RADNOWPqPo49QOBWe8I6nlAck2kA"
+token="token"
 cs = telebot.TeleBot(token)
 db.init()
 @cs.message_handler(commands =['start'])
